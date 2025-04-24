@@ -1,6 +1,9 @@
 package com.joaovictorguedes.questao01;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    CheckBox riceCheckBox, milkCheckBox, meatCheckBox, beanCheckBox, sodaCheckBox;
+    TextView resultText;
+    Button resultButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +26,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        setupComponents();
+    }
+
+    private void setupComponents() {
+        riceCheckBox = findViewById(R.id.riceCheckBox);
+        milkCheckBox = findViewById(R.id.milkCheckBox);
+        meatCheckBox = findViewById(R.id.meatCheckBox);
+        beanCheckBox = findViewById(R.id.beanCheckBox);
+        sodaCheckBox = findViewById(R.id.sodaCheckBox);
+
+        resultText = findViewById(R.id.resultText);
+
+        resultButton = findViewById(R.id.resultButton);
     }
 }
