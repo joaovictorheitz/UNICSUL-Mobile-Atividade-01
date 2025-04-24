@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Questao02</string>
+    <string name="appTitle">Cálculo do salário</string>
+    <string name="typeYourSalary">Digite seu salário (R$)</string>
+    <string name="hintTextField">Salário</string>
+    <string name="whichPercentual">Qual será o percentual?</string>
+    <string name="rb50Percent">50%</string>
+    <string name="rb45Percent">45%</string>
+    <string name="rb40Percent">40%</string>
 </resources>
