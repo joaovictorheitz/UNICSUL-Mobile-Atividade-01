@@ -1,6 +1,7 @@
 package com.joaovictorguedes.questao01;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -11,10 +12,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.math.BigDecimal;
+
 public class MainActivity extends AppCompatActivity {
     CheckBox riceCheckBox, milkCheckBox, meatCheckBox, beanCheckBox, sodaCheckBox;
     TextView resultText;
     Button resultButton;
+
+    Double ricePrice = 2.69;
+    Double milkPrice = 2.7;
+    Double meatPrice = 16.7;
+    Double beanPrice = 3.38;
+    Double sodaPrice = 3.0;
+    Double totalResult = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,5 +50,21 @@ public class MainActivity extends AppCompatActivity {
         resultText = findViewById(R.id.resultText);
 
         resultButton = findViewById(R.id.resultButton);
+    }
+
+    public void onClickResultButton(View view) {
+        resetTotalPrice();
+
+        if (riceCheckBox.isChecked()) { totalResult += ricePrice; }
+        if (milkCheckBox.isChecked()) { totalResult += milkPrice; }
+        if (meatCheckBox.isChecked()) { totalResult += meatPrice; }
+        if (beanCheckBox.isChecked()) { totalResult += beanPrice; }
+        if (sodaCheckBox.isChecked()) { totalResult += sodaPrice; }
+
+        resultText.setText(String.format("R$ %.2f", totalResult).replace(".", ","));
+    }
+
+    private void resetTotalPrice() {
+        totalResult = 0.0;
     }
 }
