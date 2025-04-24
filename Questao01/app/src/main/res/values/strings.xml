@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Questao01</string>
+    <string name="systemTitle">Sistema de Compras</string>
+    <string name="chooseYourProduct">Escolha seu produto</string>
+    <string name="riceCheckBoxLabel">Arroz 1kg (R$ 2,69)</string>
+    <string name="milkCheckBoxLabel">Leite longa vida (R$ 2,70)</string>
+    <string name="meatCheckBoxLabel">Carne Friboi (R$16,70)</string>
+    <string name="beanCheckBoxLabel">Feijão carioquinha 1kg (R$ 3,38)</string>
+    <string name="sodaCheckBoxLabel">Refrigerante Coca-cola 2L (R$ 3,00)</string>
+    <string name="resultButtonLabel">Total da compra</string>
 </resources>
