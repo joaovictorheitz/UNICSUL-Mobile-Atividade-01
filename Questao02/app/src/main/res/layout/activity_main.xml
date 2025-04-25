@@ -61,14 +61,14 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/rb40percent"
+                android:id="@+id/rb40Percent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/rb40Percent"
                 android:textColor="@color/white" />
 
             <RadioButton
-                android:id="@+id/rb45percent"
+                android:id="@+id/rb45Percent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
@@ -76,7 +76,7 @@
                 android:textColor="@color/white" />
 
             <RadioButton
-                android:id="@+id/rb50percent"
+                android:id="@+id/rb50Percent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/rb50Percent"
@@ -87,9 +87,10 @@
             android:id="@+id/resultButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mostrar novo salário"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:onClick="onResultButtonClick"
+            android:text="Mostrar novo salário" />
 
         <TextView
             android:id="@+id/resultText"
