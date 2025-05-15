@@ -24,10 +24,6 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-    public void onClick(View view) {
-        routeToConfirmSignUp();
-    }
-
     private String getName() {
         EditText nameTextField;
         nameTextField = findViewById(R.id.nameTextField);
@@ -35,7 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
         return nameTextField.getText().toString();
     }
 
-    private void routeToConfirmSignUp() {
+    public void routeToConfirmSignUp(View view) {
         String clientName = getName();
 
         Intent intent = new Intent(SignUpActivity.this, ConfirmSignUpActivity.class);
