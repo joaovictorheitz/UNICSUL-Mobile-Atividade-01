@@ -24,6 +24,6 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void routeToSignUp(View view) {
-        startActivity(new Intent(WelcomeActivity.this, com.example.questao03.SignUpActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, SignUpActivity.class));
     }
 }

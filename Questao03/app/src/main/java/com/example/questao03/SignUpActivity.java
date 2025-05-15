@@ -1,6 +1,9 @@
 package com.example.questao03;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,5 +22,25 @@ public class SignUpActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void onClick(View view) {
+        routeToConfirmSignUp();
+    }
+
+    private String getName() {
+        EditText nameTextField;
+        nameTextField = findViewById(R.id.nameTextField);
+
+        return nameTextField.getText().toString();
+    }
+
+    private void routeToConfirmSignUp() {
+        String clientName = getName();
+
+        Intent intent = new Intent(SignUpActivity.this, ConfirmSignUpActivity.class);
+        intent.putExtra("clientName", clientName);
+
+        startActivity(intent);
     }
 }
