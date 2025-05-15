@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private String getName() {
-        EditText nameTextField;
+        TextInputEditText nameTextField;
         nameTextField = findViewById(R.id.nameTextField);
 
         return nameTextField.getText().toString();
