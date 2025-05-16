@@ -1,6 +1,8 @@
 package com.example.questao04;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +26,6 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void routeToMenu(View view) {
-//        startActivity(new Intent());
+        startActivity(new Intent(WelcomeActivity.this, MenuActivity.class));
     }
 }
