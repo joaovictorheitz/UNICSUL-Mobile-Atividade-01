@@ -37,7 +37,7 @@ public class MenuActivity extends AppCompatActivity {
         MaterialRadioButton radioButtonSelected = findViewById(radioButtonId);
 
         if (radioButtonSelected != null) {
-            String order = radioButtonSelected.toString();
+            String order = radioButtonSelected.getText().toString();
 
             Intent intent = new Intent(MenuActivity.this, ResumeActivity.class);
             intent.putExtra("clientName", clientName);
