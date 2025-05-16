@@ -33,8 +33,8 @@ public class PizzaSizeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PizzaResumeActivity.class);
 
         intent.putExtra("tasteChoosed", taste);
-        intent.putExtra("pizzaSize", getPizzaSize());
         intent.putExtra("paymentMethod", getPaymentMethod());
+        intent.putExtra("price", getPizzaPrice());
 
         startActivity(intent);
     }
@@ -45,7 +45,7 @@ public class PizzaSizeActivity extends AppCompatActivity {
         taste = intent.getStringExtra("tasteChoosed");
     }
 
-    private int getPizzaSize() {
+    private int getPizzaPrice() {
         RadioGroup radioGroupSize = findViewById(R.id.radioGroup);
         int radioButtonId = radioGroupSize.getCheckedRadioButtonId();
         MaterialRadioButton radioButtonSizeSelected = findViewById(radioButtonId);
@@ -53,11 +53,11 @@ public class PizzaSizeActivity extends AppCompatActivity {
         if (radioButtonSizeSelected == null) { return 0; }
 
         if (radioButtonId == R.id.pizza35RadioButton) {
-            return 35;
+            return 50;
         } else if (radioButtonId == R.id.pizza30RadioButton) {
-            return 30;
+            return 40;
         } else if (radioButtonId == R.id.pizza25RadioButton) {
-            return 25;
+            return 35;
         }
 
         return 0;

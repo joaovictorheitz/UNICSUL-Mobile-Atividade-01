@@ -51,7 +51,7 @@ public class PizzaTasteActivity extends AppCompatActivity {
             String taste = item.getText().toString();
 
             if (item.isChecked()) {
-                result += (i > 0 ? ", " : "") + taste;
+                result += (i == 0 ? "" : ", ") + taste;
             }
         }
 
